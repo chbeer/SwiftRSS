@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+@testable import SwiftRSS
 
 class String_ImageLinksFromHTML_Tests: XCTestCase {
 

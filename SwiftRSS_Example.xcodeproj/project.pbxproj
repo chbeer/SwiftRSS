@@ -10,29 +10,28 @@
 		1106995219EC5AAD0041A595 /* RSSItem_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106995119EC5AAD0041A595 /* RSSItem_Tests.swift */; };
 		111EFED219FD70D400300EC4 /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = 111EFED119FD70D400300EC4 /* template.html */; };
 		114E26C319BA399B00D292F3 /* RSSParser_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E26C219BA399B00D292F3 /* RSSParser_Tests.swift */; };
-		114E26C919BA3A7300D292F3 /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119025FB19B92DDF009184BE /* RSSParser.swift */; };
-		114F733C19F809200048E7B0 /* String+imageLinksFromHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114F733B19F809200048E7B0 /* String+imageLinksFromHTML.swift */; };
 		114F733E19F809C50048E7B0 /* String+imageLinksFromHTML_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114F733D19F809C50048E7B0 /* String+imageLinksFromHTML_Tests.swift */; };
-		114F733F19F8146E0048E7B0 /* String+imageLinksFromHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114F733B19F809200048E7B0 /* String+imageLinksFromHTML.swift */; };
 		117F56AF19D83AF50004DDEA /* SwiftBlog.rss in Resources */ = {isa = PBXBuildFile; fileRef = 117F56AD19D83AF50004DDEA /* SwiftBlog.rss */; };
-		117F56B219D861D10004DDEA /* RSSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F56B119D861D10004DDEA /* RSSItem.swift */; };
-		117F56B319D861F00004DDEA /* RSSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F56B119D861D10004DDEA /* RSSItem.swift */; };
 		117F56B619D872A70004DDEA /* Invalid.rss in Resources */ = {isa = PBXBuildFile; fileRef = 117F56B419D872A70004DDEA /* Invalid.rss */; };
 		119025DC19B92DA1009184BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119025DB19B92DA1009184BE /* AppDelegate.swift */; };
 		119025DE19B92DA1009184BE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119025DD19B92DA1009184BE /* MasterViewController.swift */; };
 		119025E019B92DA1009184BE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119025DF19B92DA1009184BE /* DetailViewController.swift */; };
 		119025E319B92DA1009184BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119025E119B92DA1009184BE /* Main.storyboard */; };
 		119025E519B92DA1009184BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119025E419B92DA1009184BE /* Images.xcassets */; };
-		119025FC19B92DDF009184BE /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119025FB19B92DDF009184BE /* RSSParser.swift */; };
 		119B5BCB19DEE6C10076A205 /* Wordpress.rss in Resources */ = {isa = PBXBuildFile; fileRef = 119B5BC919DEE6C10076A205 /* Wordpress.rss */; };
 		119B5BCF19DEE7320076A205 /* Tumblr.rss in Resources */ = {isa = PBXBuildFile; fileRef = 119B5BCD19DEE7320076A205 /* Tumblr.rss */; };
-		119B5BD219E1EB290076A205 /* RSSFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B5BD119E1EB290076A205 /* RSSFeed.swift */; };
 		11A935F519EFB6D6005B78A1 /* RSSFeed_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A935F419EFB6D6005B78A1 /* RSSFeed_Tests.swift */; };
-		11C8C1AE19DC3EB80040D5F4 /* NSDate+dateFromInternetDateTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8C1AD19DC3EB80040D5F4 /* NSDate+dateFromInternetDateTimeString.swift */; };
 		11C8C1B019DC7A1E0040D5F4 /* NSDate+dateFromInternetDateTimeString_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8C1AF19DC7A1E0040D5F4 /* NSDate+dateFromInternetDateTimeString_Tests.swift */; };
-		11C8C1B119DC7AF40040D5F4 /* NSDate+dateFromInternetDateTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8C1AD19DC3EB80040D5F4 /* NSDate+dateFromInternetDateTimeString.swift */; };
-		11F4B4C619E8756F0020EB6B /* RSSFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B5BD119E1EB290076A205 /* RSSFeed.swift */; };
 		11F4B4C919E890030020EB6B /* Empty.rss in Resources */ = {isa = PBXBuildFile; fileRef = 11F4B4C719E890030020EB6B /* Empty.rss */; };
+		AA4B972A1EC085FA009E5EF4 /* SwiftRSS.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4B97281EC085FA009E5EF4 /* SwiftRSS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA4B972D1EC085FA009E5EF4 /* SwiftRSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */; };
+		AA4B972E1EC085FA009E5EF4 /* SwiftRSS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA4B97331EC08623009E5EF4 /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119025FB19B92DDF009184BE /* RSSParser.swift */; };
+		AA4B97341EC08623009E5EF4 /* RSSFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B5BD119E1EB290076A205 /* RSSFeed.swift */; };
+		AA4B97351EC08623009E5EF4 /* RSSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F56B119D861D10004DDEA /* RSSItem.swift */; };
+		AA4B97361EC08623009E5EF4 /* NSDate+dateFromInternetDateTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8C1AD19DC3EB80040D5F4 /* NSDate+dateFromInternetDateTimeString.swift */; };
+		AA4B97371EC08623009E5EF4 /* String+imageLinksFromHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114F733B19F809200048E7B0 /* String+imageLinksFromHTML.swift */; };
+		AA4B973A1EC08CCD009E5EF4 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA4B97391EC08CCD009E5EF4 /* Launch.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,28 @@
 			remoteGlobalIDString = 119025D519B92DA1009184BE;
 			remoteInfo = SwiftRSS_Example;
 		};
+		AA4B972B1EC085FA009E5EF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 119025CE19B92DA1009184BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA4B97251EC085FA009E5EF4;
+			remoteInfo = SwiftRSS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA4B97321EC085FA009E5EF4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AA4B972E1EC085FA009E5EF4 /* SwiftRSS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1106995119EC5AAD0041A595 /* RSSItem_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSItem_Tests.swift; sourceTree = "<group>"; };
@@ -71,6 +91,10 @@
 		11C8C1AD19DC3EB80040D5F4 /* NSDate+dateFromInternetDateTimeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+dateFromInternetDateTimeString.swift"; sourceTree = "<group>"; };
 		11C8C1AF19DC7A1E0040D5F4 /* NSDate+dateFromInternetDateTimeString_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+dateFromInternetDateTimeString_Tests.swift"; sourceTree = "<group>"; };
 		11F4B4C719E890030020EB6B /* Empty.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Empty.rss; sourceTree = "<group>"; };
+		AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftRSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4B97281EC085FA009E5EF4 /* SwiftRSS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftRSS.h; sourceTree = "<group>"; };
+		AA4B97291EC085FA009E5EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA4B97391EC08CCD009E5EF4 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +106,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		119025D319B92DA1009184BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4B972D1EC085FA009E5EF4 /* SwiftRSS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4B97221EC085FA009E5EF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,6 +163,7 @@
 				119025FA19B92DB1009184BE /* SwiftRSS */,
 				119025D819B92DA1009184BE /* SwiftRSS_Example */,
 				114E26BF19BA399B00D292F3 /* Tests */,
+				AA4B97271EC085FA009E5EF4 /* SwiftRSS */,
 				119025D719B92DA1009184BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,6 +173,7 @@
 			children = (
 				119025D619B92DA1009184BE /* SwiftRSS_Example.app */,
 				114E26BE19BA399B00D292F3 /* Tests.xctest */,
+				AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +185,7 @@
 				119025DD19B92DA1009184BE /* MasterViewController.swift */,
 				119025DF19B92DA1009184BE /* DetailViewController.swift */,
 				119025E119B92DA1009184BE /* Main.storyboard */,
+				AA4B97391EC08CCD009E5EF4 /* Launch.storyboard */,
 				119025E419B92DA1009184BE /* Images.xcassets */,
 				119025D919B92DA1009184BE /* Supporting Files */,
 				111EFED119FD70D400300EC4 /* template.html */,
@@ -169,16 +204,36 @@
 		119025FA19B92DB1009184BE /* SwiftRSS */ = {
 			isa = PBXGroup;
 			children = (
+				AA4B97281EC085FA009E5EF4 /* SwiftRSS.h */,
 				119025FB19B92DDF009184BE /* RSSParser.swift */,
 				119B5BD119E1EB290076A205 /* RSSFeed.swift */,
 				117F56B119D861D10004DDEA /* RSSItem.swift */,
 				11C8C1AD19DC3EB80040D5F4 /* NSDate+dateFromInternetDateTimeString.swift */,
 				114F733B19F809200048E7B0 /* String+imageLinksFromHTML.swift */,
+				AA4B97291EC085FA009E5EF4 /* Info.plist */,
+			);
+			path = SwiftRSS;
+			sourceTree = "<group>";
+		};
+		AA4B97271EC085FA009E5EF4 /* SwiftRSS */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = SwiftRSS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AA4B97231EC085FA009E5EF4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4B972A1EC085FA009E5EF4 /* SwiftRSS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		114E26BD19BA399B00D292F3 /* Tests */ = {
@@ -206,15 +261,35 @@
 				119025D219B92DA1009184BE /* Sources */,
 				119025D319B92DA1009184BE /* Frameworks */,
 				119025D419B92DA1009184BE /* Resources */,
+				AA4B97321EC085FA009E5EF4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AA4B972C1EC085FA009E5EF4 /* PBXTargetDependency */,
 			);
 			name = SwiftRSS_Example;
 			productName = SwiftRSS_Example;
 			productReference = 119025D619B92DA1009184BE /* SwiftRSS_Example.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AA4B97251EC085FA009E5EF4 /* SwiftRSS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA4B97311EC085FA009E5EF4 /* Build configuration list for PBXNativeTarget "SwiftRSS" */;
+			buildPhases = (
+				AA4B97211EC085FA009E5EF4 /* Sources */,
+				AA4B97221EC085FA009E5EF4 /* Frameworks */,
+				AA4B97231EC085FA009E5EF4 /* Headers */,
+				AA4B97241EC085FA009E5EF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftRSS;
+			productName = SwiftRSS;
+			productReference = AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -222,15 +297,21 @@
 		119025CE19B92DA1009184BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Thibaut LE LEVIER";
 				TargetAttributes = {
 					114E26BD19BA399B00D292F3 = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0830;
 						TestTargetID = 119025D519B92DA1009184BE;
 					};
 					119025D519B92DA1009184BE = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0830;
+					};
+					AA4B97251EC085FA009E5EF4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -248,6 +329,7 @@
 			projectRoot = "";
 			targets = (
 				119025D519B92DA1009184BE /* SwiftRSS_Example */,
+				AA4B97251EC085FA009E5EF4 /* SwiftRSS */,
 				114E26BD19BA399B00D292F3 /* Tests */,
 			);
 		};
@@ -273,6 +355,14 @@
 				119025E319B92DA1009184BE /* Main.storyboard in Resources */,
 				111EFED219FD70D400300EC4 /* template.html in Resources */,
 				119025E519B92DA1009184BE /* Images.xcassets in Resources */,
+				AA4B973A1EC08CCD009E5EF4 /* Launch.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4B97241EC085FA009E5EF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,15 +374,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				114F733E19F809C50048E7B0 /* String+imageLinksFromHTML_Tests.swift in Sources */,
-				114F733F19F8146E0048E7B0 /* String+imageLinksFromHTML.swift in Sources */,
 				11C8C1B019DC7A1E0040D5F4 /* NSDate+dateFromInternetDateTimeString_Tests.swift in Sources */,
-				11F4B4C619E8756F0020EB6B /* RSSFeed.swift in Sources */,
-				11C8C1B119DC7AF40040D5F4 /* NSDate+dateFromInternetDateTimeString.swift in Sources */,
 				1106995219EC5AAD0041A595 /* RSSItem_Tests.swift in Sources */,
 				11A935F519EFB6D6005B78A1 /* RSSFeed_Tests.swift in Sources */,
-				117F56B219D861D10004DDEA /* RSSItem.swift in Sources */,
 				114E26C319BA399B00D292F3 /* RSSParser_Tests.swift in Sources */,
-				114E26C919BA3A7300D292F3 /* RSSParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +385,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11C8C1AE19DC3EB80040D5F4 /* NSDate+dateFromInternetDateTimeString.swift in Sources */,
-				114F733C19F809200048E7B0 /* String+imageLinksFromHTML.swift in Sources */,
 				119025E019B92DA1009184BE /* DetailViewController.swift in Sources */,
-				117F56B319D861F00004DDEA /* RSSItem.swift in Sources */,
-				119B5BD219E1EB290076A205 /* RSSFeed.swift in Sources */,
 				119025DE19B92DA1009184BE /* MasterViewController.swift in Sources */,
 				119025DC19B92DA1009184BE /* AppDelegate.swift in Sources */,
-				119025FC19B92DDF009184BE /* RSSParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4B97211EC085FA009E5EF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4B97351EC08623009E5EF4 /* RSSItem.swift in Sources */,
+				AA4B97341EC08623009E5EF4 /* RSSFeed.swift in Sources */,
+				AA4B97371EC08623009E5EF4 /* String+imageLinksFromHTML.swift in Sources */,
+				AA4B97331EC08623009E5EF4 /* RSSParser.swift in Sources */,
+				AA4B97361EC08623009E5EF4 /* NSDate+dateFromInternetDateTimeString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +410,11 @@
 			isa = PBXTargetDependency;
 			target = 119025D519B92DA1009184BE /* SwiftRSS_Example */;
 			targetProxy = 114E26C419BA399B00D292F3 /* PBXContainerItemProxy */;
+		};
+		AA4B972C1EC085FA009E5EF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA4B97251EC085FA009E5EF4 /* SwiftRSS */;
+			targetProxy = AA4B972B1EC085FA009E5EF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -346,7 +443,9 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lelevier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftRSS_Example.app/SwiftRSS_Example";
 			};
 			name = Debug;
@@ -360,7 +459,9 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lelevier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftRSS_Example.app/SwiftRSS_Example";
 			};
 			name = Release;
@@ -378,15 +479,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -421,8 +526,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -430,6 +537,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -439,6 +547,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -447,22 +556,90 @@
 		119025F519B92DA1009184BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SwiftRSS_Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lelevier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		119025F619B92DA1009184BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SwiftRSS_Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lelevier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AA4B972F1EC085FA009E5EF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SwiftRSS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lelevier..SwiftRSS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos tvos macos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA4B97301EC085FA009E5EF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SwiftRSS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lelevier..SwiftRSS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos tvos macos";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -495,6 +672,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AA4B97311EC085FA009E5EF4 /* Build configuration list for PBXNativeTarget "SwiftRSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA4B972F1EC085FA009E5EF4 /* Debug */,
+				AA4B97301EC085FA009E5EF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftRSS
 
 class MasterViewController: UITableViewController {
 
@@ -17,7 +18,7 @@ class MasterViewController: UITableViewController {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+        if UIDevice.current.userInterfaceIdiom == .pad {
             self.clearsSelectionOnViewWillAppear = false
             self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
         }
@@ -28,15 +29,15 @@ class MasterViewController: UITableViewController {
 
         if let split = self.splitViewController {
             let controllers = split.viewControllers
-            self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
+            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        let request = NSURLRequest(URL: NSURL(string: "http://developer.apple.com/swift/blog/news.rss")!)
+        let request = URLRequest(url: URL(string: "http://developer.apple.com/swift/blog/news.rss")!)
         
         RSSParser.parseFeedForRequest(request, callback: { (feed, error) -> Void in
-            if let myFeed = feed?
+            if let myFeed = feed
             {
-                if let title = myFeed.title?
+                if let title = myFeed.title
                 {
                     self.title = title
                 }
@@ -54,16 +55,16 @@ class MasterViewController: UITableViewController {
 
     // MARK: - Segues
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
                 
-                if let feed = self.feed?
+                if let feed = self.feed
                 {
                     let item = feed.items[indexPath.row] as RSSItem
-                    let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
+                    let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                     controller.detailItem = item
-                    controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                    controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                     controller.navigationItem.leftItemsSupplementBackButton = true
                 }
             }
@@ -72,13 +73,13 @@ class MasterViewController: UITableViewController {
 
     // MARK: - Table View
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let feed = self.feed?
+        if let feed = self.feed
         {
             return feed.items.count
         }
@@ -86,14 +87,14 @@ class MasterViewController: UITableViewController {
         return 0
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
 
-        if let feed = self.feed?
+        if let feed = self.feed
         {
             let item = feed.items[indexPath.row] as RSSItem
             
-            cell.textLabel.text = item.title
+            cell.textLabel?.text = item.title
         }
         
         return cell

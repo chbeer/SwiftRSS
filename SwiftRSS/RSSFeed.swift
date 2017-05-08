@@ -8,29 +8,30 @@
 
 import UIKit
 
+public
 class RSSFeed: NSObject, NSCoding {
     
-    var items: [RSSItem]! = [RSSItem]()
+    public var items: [RSSItem]! = [RSSItem]()
     
-    var title: String?
-    var link: NSURL?
+    public var title: String?
+    public var link: URL?
     
-    func setLink(let linkString: String!)
+    func setLink(string: String!)
     {
-        link = NSURL(string: linkString)
+        link = URL(string: string)
     }
     
-    var feedDescription: String?
-    var language: String?
-    var lastBuildDate: NSDate?
+    public var feedDescription: String?
+    public var language: String?
+    public var lastBuildDate: Date?
     
-    func setlastBuildDate(let dateString: String!)
+    func setLastBuildDate(string: String!)
     {
-        lastBuildDate = NSDate.dateFromInternetDateTimeString(dateString)
+        lastBuildDate = Date.dateFromInternetDateTimeString(string)
     }
     
-    var generator: String?
-    var copyright: String?
+    public var generator: String?
+    public var copyright: String?
     
     
     override init()
@@ -39,60 +40,60 @@ class RSSFeed: NSObject, NSCoding {
     }
     
     // MARK: NSCoding
-    required init(coder aDecoder: NSCoder)
+    required public init(coder aDecoder: NSCoder)
     {
         super.init()
         
-        title = aDecoder.decodeObjectForKey("title") as? String
-        link = aDecoder.decodeObjectForKey("link") as? NSURL
-        feedDescription = aDecoder.decodeObjectForKey("description") as? String
-        language = aDecoder.decodeObjectForKey("language") as? String
-        lastBuildDate = aDecoder.decodeObjectForKey("lastBuildDate") as? NSDate
-        generator = aDecoder.decodeObjectForKey("generator") as? NSString
-        copyright = aDecoder.decodeObjectForKey("copyright") as? NSString
+        title = aDecoder.decodeObject(forKey: "title") as? String
+        link = aDecoder.decodeObject(forKey: "link") as? URL
+        feedDescription = aDecoder.decodeObject(forKey: "description") as? String
+        language = aDecoder.decodeObject(forKey: "language") as? String
+        lastBuildDate = aDecoder.decodeObject(forKey: "lastBuildDate") as? Date
+        generator = aDecoder.decodeObject(forKey: "generator") as? String
+        copyright = aDecoder.decodeObject(forKey: "copyright") as? String
         
-        items = aDecoder.decodeObjectForKey("items") as [RSSItem]
+        items = aDecoder.decodeObject(forKey: "items") as? [RSSItem]
     }
     
-    func encodeWithCoder(aCoder: NSCoder)
+    public func encode(with aCoder: NSCoder)
     {
-        if let title = self.title?
+        if let title = self.title
         {
-            aCoder.encodeObject(title, forKey: "title")
+            aCoder.encode(title, forKey: "title")
         }
         
-        if let link = self.link?
+        if let link = self.link
         {
-            aCoder.encodeObject(link, forKey: "link")
+            aCoder.encode(link, forKey: "link")
         }
         
-        if let feedDescription = self.feedDescription?
+        if let feedDescription = self.feedDescription
         {
-            aCoder.encodeObject(feedDescription, forKey: "description")
+            aCoder.encode(feedDescription, forKey: "description")
         }
         
-        if let language = self.language?
+        if let language = self.language
         {
-            aCoder.encodeObject(language, forKey: "language")
+            aCoder.encode(language, forKey: "language")
         }
         
-        if let lastBuildDate = self.lastBuildDate?
+        if let lastBuildDate = self.lastBuildDate
         {
-            aCoder.encodeObject(lastBuildDate, forKey: "lastBuildDate")
+            aCoder.encode(lastBuildDate, forKey: "lastBuildDate")
         }
         
-        if let generator = self.generator?
+        if let generator = self.generator
         {
-            aCoder.encodeObject(generator, forKey: "generator")
+            aCoder.encode(generator, forKey: "generator")
         }
         
         
-        if let copyright = self.copyright?
+        if let copyright = self.copyright
         {
-            aCoder.encodeObject(copyright, forKey: "copyright")
+            aCoder.encode(copyright, forKey: "copyright")
         }
         
-        aCoder.encodeObject(self.items, forKey: "items")
+        aCoder.encode(self.items, forKey: "items")
     }
     
 }

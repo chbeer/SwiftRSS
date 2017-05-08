@@ -8,10 +8,11 @@
 
 import UIKit
 import XCTest
+@testable import SwiftRSS
 
 class RSSFeed_Tests: XCTestCase {
     
-    let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+    let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
 
     override func setUp() {
         super.setUp()
@@ -23,10 +24,10 @@ class RSSFeed_Tests: XCTestCase {
 
     func test_setLink_withAValidURLString_shouldCreateAValidURL()
     {
-        var item: RSSItem = RSSItem()
-        item.setLink("http://www.apple.com")
+        let item: RSSItem = RSSItem()
+        item.setLink(string: "http://www.apple.com")
         
-        if let link = item.link?
+        if let _ = item.link
         {
             XCTAssert(true, "link is valid")
         }
@@ -39,93 +40,93 @@ class RSSFeed_Tests: XCTestCase {
     
     func test_archivingAndUnarchiving_withValidObject_shouldReturnValidObjectWithSameValues()
     {
-        var feed: RSSFeed = RSSFeed()
+        let feed: RSSFeed = RSSFeed()
         
         feed.title = "Feed title"
-        feed.setLink("http://www.swift.io")
+        feed.setLink(string: "http://www.swift.io")
         feed.feedDescription = "Description of the feed"
         feed.language = "fr"
-        feed.lastBuildDate = NSDate()
+        feed.lastBuildDate = Date()
         feed.generator = "My Generator"
         feed.copyright = "Copyright Acme corp"
         
-        var item: RSSItem = RSSItem()
+        let item: RSSItem = RSSItem()
         
         item.title = "Hello"
-        item.setLink("http://www.apple.com")
+        item.setLink(string: "http://www.apple.com")
         item.guid = "1234"
-        item.pubDate = NSDate()
+        item.pubDate = Date()
         item.itemDescription = "Big Description"
         item.content = "Here is the content"
-        item.setCommentsLink("http://www.test.com")
-        item.setCommentRSSLink("http://www.whatever.com/")
+        item.setCommentsLink(string: "http://www.test.com")
+        item.setCommentRSSLink(string: "http://www.whatever.com/")
         item.commentsCount = 666
         item.author = "John Doe"
         item.categories = ["One","Two","Tree"]
         
         feed.items.append(item)
         
-        var item2: RSSItem = RSSItem()
+        let item2: RSSItem = RSSItem()
         
         item2.title = "Hello2"
-        item2.setLink("http://www.google.com")
+        item2.setLink(string: "http://www.google.com")
         item2.guid = "5678"
-        item2.pubDate = NSDate()
+        item2.pubDate = Date()
         item2.itemDescription = "Big Description Again"
         item2.content = "Here is the content for the second item"
-        item2.setCommentsLink("http://www.testing.com")
-        item2.setCommentRSSLink("http://www.whateveragain.com/")
+        item2.setCommentsLink(string: "http://www.testing.com")
+        item2.setCommentRSSLink(string: "http://www.whateveragain.com/")
         item2.commentsCount = 42
         item2.author = "Jane Doe"
         item2.categories = ["Four","Five","Six"]
         
         feed.items.append(item2)
         
-        let archive = documentsPath.stringByAppendingString("test.archive")
+        let archive = documentsPath + "test.archive"
         
         NSKeyedArchiver.archiveRootObject(feed, toFile: archive)
         
-        var feed2 = NSKeyedUnarchiver.unarchiveObjectWithFile(archive) as RSSFeed
+        let feed2 = NSKeyedUnarchiver.unarchiveObject(withFile: archive) as! RSSFeed
 
-        XCTAssert(feed.title == feed2.title, "")
-        XCTAssert(feed.link == feed2.link, "")
-        XCTAssert(feed.feedDescription == feed2.feedDescription, "")
-        XCTAssert(feed.language == feed2.language, "")
-        XCTAssert(feed.lastBuildDate == feed2.lastBuildDate, "")
-        XCTAssert(feed.generator == feed2.generator, "")
-        XCTAssert(feed.copyright == feed2.copyright, "")
-        XCTAssert(feed.items.count == feed2.items.count, "")
+        XCTAssertEqual(feed.title, feed2.title)
+        XCTAssertEqual(feed.link, feed2.link)
+        XCTAssertEqual(feed.feedDescription, feed2.feedDescription)
+        XCTAssertEqual(feed.language, feed2.language)
+        XCTAssertEqual(feed.lastBuildDate, feed2.lastBuildDate)
+        XCTAssertEqual(feed.generator, feed2.generator)
+        XCTAssertEqual(feed.copyright, feed2.copyright)
+        XCTAssertEqual(feed.items.count, feed2.items.count)
         
-        var itemcopy = feed2.items[0]
+        let itemcopy = feed2.items[0]
         
-        XCTAssert(item.title == itemcopy.title, "")
-        XCTAssert(item.link == itemcopy.link, "")
-        XCTAssert(item.guid == itemcopy.guid, "")
-        XCTAssert(item.pubDate == itemcopy.pubDate, "")
-        XCTAssert(item.itemDescription == itemcopy.itemDescription, "")
-        XCTAssert(item.content == itemcopy.content, "")
-        XCTAssert(item.commentsLink!.absoluteString == itemcopy.commentsLink!.absoluteString, "")
-        XCTAssert(item.commentRSSLink!.absoluteString == itemcopy.commentRSSLink!.absoluteString, "")
-        XCTAssert(item.commentsCount == itemcopy.commentsCount, "")
-        XCTAssert(item.author == itemcopy.author, "")
-        XCTAssert(item.categories[0] == itemcopy.categories[0], "")
-        XCTAssert(item.categories[1] == itemcopy.categories[1], "")
-        XCTAssert(item.categories[2] == itemcopy.categories[2], "")
+        XCTAssertEqual(item.title, itemcopy.title)
+        XCTAssertEqual(item.link, itemcopy.link)
+        XCTAssertEqual(item.guid, itemcopy.guid)
+        XCTAssertEqual(item.pubDate, itemcopy.pubDate)
+        XCTAssertEqual(item.itemDescription, itemcopy.itemDescription)
+        XCTAssertEqual(item.content, itemcopy.content)
+        XCTAssertEqual(item.commentsLink!.absoluteString, itemcopy.commentsLink!.absoluteString)
+        XCTAssertEqual(item.commentRSSLink!.absoluteString, itemcopy.commentRSSLink!.absoluteString)
+        XCTAssertEqual(item.commentsCount, itemcopy.commentsCount)
+        XCTAssertEqual(item.author, itemcopy.author)
+        XCTAssertEqual(item.categories[0], itemcopy.categories[0])
+        XCTAssertEqual(item.categories[1], itemcopy.categories[1])
+        XCTAssertEqual(item.categories[2], itemcopy.categories[2])
         
-        var item2copy = feed2.items[1]
+        let item2copy = feed2.items[1]
         
-        XCTAssert(item2.title == item2copy.title, "")
-        XCTAssert(item2.link == item2copy.link, "")
-        XCTAssert(item2.guid == item2copy.guid, "")
-        XCTAssert(item2.pubDate == item2copy.pubDate, "")
-        XCTAssert(item2.itemDescription == item2copy.itemDescription, "")
-        XCTAssert(item2.content == item2copy.content, "")
-        XCTAssert(item2.commentsLink!.absoluteString == item2copy.commentsLink!.absoluteString, "")
-        XCTAssert(item2.commentRSSLink!.absoluteString == item2copy.commentRSSLink!.absoluteString, "")
-        XCTAssert(item2.commentsCount == item2copy.commentsCount, "")
-        XCTAssert(item2.author == item2copy.author, "")
-        XCTAssert(item2.categories[0] == item2copy.categories[0], "")
-        XCTAssert(item2.categories[1] == item2copy.categories[1], "")
-        XCTAssert(item2.categories[2] == item2copy.categories[2], "")
+        XCTAssertEqual(item2.title, item2copy.title)
+        XCTAssertEqual(item2.link, item2copy.link)
+        XCTAssertEqual(item2.guid, item2copy.guid)
+        XCTAssertEqual(item2.pubDate, item2copy.pubDate)
+        XCTAssertEqual(item2.itemDescription, item2copy.itemDescription)
+        XCTAssertEqual(item2.content, item2copy.content)
+        XCTAssertEqual(item2.commentsLink!.absoluteString, item2copy.commentsLink!.absoluteString)
+        XCTAssertEqual(item2.commentRSSLink!.absoluteString, item2copy.commentRSSLink!.absoluteString)
+        XCTAssertEqual(item2.commentsCount, item2copy.commentsCount)
+        XCTAssertEqual(item2.author, item2copy.author)
+        XCTAssertEqual(item2.categories[0], item2copy.categories[0])
+        XCTAssertEqual(item2.categories[1], item2copy.categories[1])
+        XCTAssertEqual(item2.categories[2], item2copy.categories[2])
     }
 }

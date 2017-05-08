@@ -8,12 +8,13 @@
 
 import UIKit
 import XCTest
+@testable import SwiftRSS
 
 class NSDateExtension_Tests: XCTestCase {
     
-    let GMT_timeZone: NSTimeZone! = NSTimeZone(forSecondsFromGMT: 0)
-    let calendar: NSCalendar! = NSCalendar(calendarIdentifier: NSGregorianCalendar)
-    let calendar_flags = NSCalendarUnit(UInt.max)
+    let GMT_timeZone: TimeZone! = TimeZone(secondsFromGMT: 0)
+    var calendar: Calendar! = Calendar(identifier: Calendar.Identifier.gregorian)
+    let calendar_flags: Set<Calendar.Component> = [.weekday, .day, .month, .year, .hour, .minute, .second, .timeZone]
 
     override func setUp() {
         super.setUp()
@@ -30,18 +31,18 @@ class NSDateExtension_Tests: XCTestCase {
         
         let dateString = "Sun, 19 May 2002 15:21:36 GMT"
         
-        if let date: NSDate = NSDate.dateFromInternetDateTimeString(dateString)?
+        if let date: Date = Date.dateFromInternetDateTimeString(dateString)
         {
-            var dateComponent = calendar.components(calendar_flags, fromDate: date)
+            var dateComponent = calendar.dateComponents(calendar_flags, from: date)
             
-            XCTAssert(dateComponent.weekday == 1, "")
-            XCTAssert(dateComponent.day == 19, "")
-            XCTAssert(dateComponent.month == 5, "")
-            XCTAssert(dateComponent.year == 2002, "")
-            XCTAssert(dateComponent.hour == 15, "")
-            XCTAssert(dateComponent.minute == 21, "")
-            XCTAssert(dateComponent.second == 36, "")
-            XCTAssert(dateComponent.timeZone!.isEqualToTimeZone(GMT_timeZone), "")
+            XCTAssertEqual(dateComponent.weekday, 1)
+            XCTAssertEqual(dateComponent.day, 19)
+            XCTAssertEqual(dateComponent.month, 5)
+            XCTAssertEqual(dateComponent.year, 2002)
+            XCTAssertEqual(dateComponent.hour, 15)
+            XCTAssertEqual(dateComponent.minute, 21)
+            XCTAssertEqual(dateComponent.second, 36)
+            XCTAssertEqual(dateComponent.timeZone!, GMT_timeZone)
         }
         else
         {
@@ -53,18 +54,18 @@ class NSDateExtension_Tests: XCTestCase {
         
         let dateString = "Sun, 19 May 2002 15:21 GMT"
         
-        if let date: NSDate = NSDate.dateFromInternetDateTimeString(dateString)?
+        if let date: Date = Date.dateFromInternetDateTimeString(dateString)
         {
-            var dateComponent = calendar.components(calendar_flags, fromDate: date)
+            var dateComponent = calendar.dateComponents(calendar_flags, from: date)
             
-            XCTAssert(dateComponent.weekday == 1, "")
-            XCTAssert(dateComponent.day == 19, "")
-            XCTAssert(dateComponent.month == 5, "")
-            XCTAssert(dateComponent.year == 2002, "")
-            XCTAssert(dateComponent.hour == 15, "")
-            XCTAssert(dateComponent.minute == 21, "")
-            XCTAssert(dateComponent.second == 0, "")
-            XCTAssert(dateComponent.timeZone!.isEqualToTimeZone(GMT_timeZone), "")
+            XCTAssertEqual(dateComponent.weekday, 1)
+            XCTAssertEqual(dateComponent.day, 19)
+            XCTAssertEqual(dateComponent.month, 5)
+            XCTAssertEqual(dateComponent.year, 2002)
+            XCTAssertEqual(dateComponent.hour, 15)
+            XCTAssertEqual(dateComponent.minute, 21)
+            XCTAssertEqual(dateComponent.second, 0)
+            XCTAssertEqual(dateComponent.timeZone!, GMT_timeZone)
         }
         else
         {
@@ -76,17 +77,17 @@ class NSDateExtension_Tests: XCTestCase {
         
         let dateString = "Sun, 19 May 2002 15:21:36"
         
-        if let date: NSDate = NSDate.dateFromInternetDateTimeString(dateString)?
+        if let date: Date = Date.dateFromInternetDateTimeString(dateString)
         {
-            var dateComponent = calendar.components(calendar_flags, fromDate: date)
+            var dateComponent = calendar.dateComponents(calendar_flags, from: date)
             
-            XCTAssert(dateComponent.weekday == 1, "")
-            XCTAssert(dateComponent.day == 19, "")
-            XCTAssert(dateComponent.month == 5, "")
-            XCTAssert(dateComponent.year == 2002, "")
-            XCTAssert(dateComponent.hour == 15, "")
-            XCTAssert(dateComponent.minute == 21, "")
-            XCTAssert(dateComponent.second == 36, "")
+            XCTAssertEqual(dateComponent.weekday, 1)
+            XCTAssertEqual(dateComponent.day, 19)
+            XCTAssertEqual(dateComponent.month, 5)
+            XCTAssertEqual(dateComponent.year, 2002)
+            XCTAssertEqual(dateComponent.hour, 15)
+            XCTAssertEqual(dateComponent.minute, 21)
+            XCTAssertEqual(dateComponent.second, 36)
         }
         else
         {
@@ -98,17 +99,17 @@ class NSDateExtension_Tests: XCTestCase {
         
         let dateString = "Sun, 19 May 2002 15:21"
         
-        if let date: NSDate = NSDate.dateFromInternetDateTimeString(dateString)?
+        if let date: Date = Date.dateFromInternetDateTimeString(dateString)
         {
-            var dateComponent = calendar.components(calendar_flags, fromDate: date)
+            var dateComponent = calendar.dateComponents(calendar_flags, from: date)
             
-            XCTAssert(dateComponent.weekday == 1, "")
-            XCTAssert(dateComponent.day == 19, "")
-            XCTAssert(dateComponent.month == 5, "")
-            XCTAssert(dateComponent.year == 2002, "")
-            XCTAssert(dateComponent.hour == 15, "")
-            XCTAssert(dateComponent.minute == 21, "")
-            XCTAssert(dateComponent.second == 0, "")
+            XCTAssertEqual(dateComponent.weekday, 1)
+            XCTAssertEqual(dateComponent.day, 19)
+            XCTAssertEqual(dateComponent.month, 5)
+            XCTAssertEqual(dateComponent.year, 2002)
+            XCTAssertEqual(dateComponent.hour, 15)
+            XCTAssertEqual(dateComponent.minute, 21)
+            XCTAssertEqual(dateComponent.second, 0)
         }
         else
         {
@@ -120,17 +121,17 @@ class NSDateExtension_Tests: XCTestCase {
         
         let dateString = "19 May 2002 15:21:36 GMT"
         
-        if let date: NSDate = NSDate.dateFromInternetDateTimeString(dateString)?
+        if let date: Date = Date.dateFromInternetDateTimeString(dateString)
         {
-            var dateComponent = calendar.components(calendar_flags, fromDate: date)
+            var dateComponent = calendar.dateComponents(calendar_flags, from: date)
             
-            XCTAssert(dateComponent.day == 19, "")
-            XCTAssert(dateComponent.month == 5, "")
-            XCTAssert(dateComponent.year == 2002, "")
-            XCTAssert(dateComponent.hour == 15, "")
-            XCTAssert(dateComponent.minute == 21, "")
-            XCTAssert(dateComponent.second == 36, "")
-            XCTAssert(dateComponent.timeZone!.isEqualToTimeZone(GMT_timeZone), "")
+            XCTAssertEqual(dateComponent.day, 19)
+            XCTAssertEqual(dateComponent.month, 5)
+            XCTAssertEqual(dateComponent.year, 2002)
+            XCTAssertEqual(dateComponent.hour, 15)
+            XCTAssertEqual(dateComponent.minute, 21)
+            XCTAssertEqual(dateComponent.second, 36)
+            XCTAssertEqual(dateComponent.timeZone!, GMT_timeZone)
         }
         else
         {
@@ -142,17 +143,17 @@ class NSDateExtension_Tests: XCTestCase {
         
         let dateString = "19 May 2002 15:21 GMT"
         
-        if let date: NSDate = NSDate.dateFromInternetDateTimeString(dateString)?
+        if let date: Date = Date.dateFromInternetDateTimeString(dateString)
         {
-            var dateComponent = calendar.components(calendar_flags, fromDate: date)
+            var dateComponent = calendar.dateComponents(calendar_flags, from: date)
             
-            XCTAssert(dateComponent.day == 19, "")
-            XCTAssert(dateComponent.month == 5, "")
-            XCTAssert(dateComponent.year == 2002, "")
-            XCTAssert(dateComponent.hour == 15, "")
-            XCTAssert(dateComponent.minute == 21, "")
-            XCTAssert(dateComponent.second == 0, "")
-            XCTAssert(dateComponent.timeZone!.isEqualToTimeZone(GMT_timeZone), "")
+            XCTAssertEqual(dateComponent.day, 19)
+            XCTAssertEqual(dateComponent.month, 5)
+            XCTAssertEqual(dateComponent.year, 2002)
+            XCTAssertEqual(dateComponent.hour, 15)
+            XCTAssertEqual(dateComponent.minute, 21)
+            XCTAssertEqual(dateComponent.second, 0)
+            XCTAssertEqual(dateComponent.timeZone!, GMT_timeZone)
         }
         else
         {
@@ -164,16 +165,16 @@ class NSDateExtension_Tests: XCTestCase {
         
         let dateString = "19 May 2002 15:21:36"
         
-        if let date: NSDate = NSDate.dateFromInternetDateTimeString(dateString)?
+        if let date: Date = Date.dateFromInternetDateTimeString(dateString)
         {
-            var dateComponent = calendar.components(calendar_flags, fromDate: date)
+            var dateComponent = calendar.dateComponents(calendar_flags, from: date)
             
-            XCTAssert(dateComponent.day == 19, "")
-            XCTAssert(dateComponent.month == 5, "")
-            XCTAssert(dateComponent.year == 2002, "")
-            XCTAssert(dateComponent.hour == 15, "")
-            XCTAssert(dateComponent.minute == 21, "")
-            XCTAssert(dateComponent.second == 36, "")
+            XCTAssertEqual(dateComponent.day, 19)
+            XCTAssertEqual(dateComponent.month, 5)
+            XCTAssertEqual(dateComponent.year, 2002)
+            XCTAssertEqual(dateComponent.hour, 15)
+            XCTAssertEqual(dateComponent.minute, 21)
+            XCTAssertEqual(dateComponent.second, 36)
         }
         else
         {
@@ -185,16 +186,16 @@ class NSDateExtension_Tests: XCTestCase {
         
         let dateString = "19 May 2002 15:21"
         
-        if let date: NSDate = NSDate.dateFromInternetDateTimeString(dateString)?
+        if let date: Date = Date.dateFromInternetDateTimeString(dateString)
         {
-            var dateComponent = calendar.components(calendar_flags, fromDate: date)
+            var dateComponent = calendar.dateComponents(calendar_flags, from: date)
             
-            XCTAssert(dateComponent.day == 19, "")
-            XCTAssert(dateComponent.month == 5, "")
-            XCTAssert(dateComponent.year == 2002, "")
-            XCTAssert(dateComponent.hour == 15, "")
-            XCTAssert(dateComponent.minute == 21, "")
-            XCTAssert(dateComponent.second == 0, "")
+            XCTAssertEqual(dateComponent.day, 19)
+            XCTAssertEqual(dateComponent.month, 5)
+            XCTAssertEqual(dateComponent.year, 2002)
+            XCTAssertEqual(dateComponent.hour, 15)
+            XCTAssertEqual(dateComponent.minute, 21)
+            XCTAssertEqual(dateComponent.second, 0)
         }
         else
         {
@@ -207,20 +208,20 @@ class NSDateExtension_Tests: XCTestCase {
     func test_dateFormatter_withDateStringRFC3339Format1_shouldReturnValidDate() {
         
         let dateString = "1996-12-19T16:39:57-0800"
-        let timeZone = NSTimeZone(forSecondsFromGMT: -60*60*8)
-        calendar.timeZone = timeZone
+        let timeZone = TimeZone(secondsFromGMT: -60*60*8)
+        calendar.timeZone = timeZone!
         
-        if let date: NSDate = NSDate.dateFromInternetDateTimeString(dateString)?
+        if let date: Date = Date.dateFromInternetDateTimeString(dateString)
         {
-            var dateComponent = calendar.components(calendar_flags, fromDate: date)
+            var dateComponent = calendar.dateComponents(calendar_flags, from: date)
             
-            XCTAssert(dateComponent.day == 19, "")
-            XCTAssert(dateComponent.month == 12, "")
-            XCTAssert(dateComponent.year == 1996, "")
-            XCTAssert(dateComponent.hour == 16, "")
-            XCTAssert(dateComponent.minute == 39, "")
-            XCTAssert(dateComponent.second == 57, "")
-            XCTAssert(dateComponent.timeZone!.isEqualToTimeZone(timeZone), "")
+            XCTAssertEqual(dateComponent.day, 19)
+            XCTAssertEqual(dateComponent.month, 12)
+            XCTAssertEqual(dateComponent.year, 1996)
+            XCTAssertEqual(dateComponent.hour, 16)
+            XCTAssertEqual(dateComponent.minute, 39)
+            XCTAssertEqual(dateComponent.second, 57)
+            XCTAssertEqual(dateComponent.timeZone!, timeZone)
         }
         else
         {
@@ -231,21 +232,21 @@ class NSDateExtension_Tests: XCTestCase {
     func test_dateFormatter_withDateStringRFC3339Format2_shouldReturnValidDate() {
         
         let dateString = "1937-01-01T12:00:27.87+0020"
-        let timeZone = NSTimeZone(forSecondsFromGMT: 60*60*2)
-        calendar.timeZone = timeZone
+        let timeZone = TimeZone(secondsFromGMT: 60*60*2)
+        calendar.timeZone = timeZone!
         
-        if let date: NSDate = NSDate.dateFromInternetDateTimeString(dateString)?
+        if let date: Date = Date.dateFromInternetDateTimeString(dateString)
         {
             
-            var dateComponent = calendar.components(calendar_flags, fromDate: date)
+            var dateComponent = calendar.dateComponents(calendar_flags, from: date)
             
-            XCTAssert(dateComponent.day == 1, "")
-            XCTAssert(dateComponent.month == 1, "")
-            XCTAssert(dateComponent.year == 1937, "")
-//            XCTAssert(dateComponent.hour == 12, "")
-//            XCTAssert(dateComponent.minute == 0, "")
-            XCTAssert(dateComponent.second == 27, "")
-            XCTAssert(dateComponent.timeZone!.isEqualToTimeZone(timeZone), "")
+            XCTAssertEqual(dateComponent.day, 1)
+            XCTAssertEqual(dateComponent.month, 1)
+            XCTAssertEqual(dateComponent.year, 1937)
+//            XCTAssertEqual(dateComponent.hour, 12)
+//            XCTAssertEqual(dateComponent.minute, 0)
+            XCTAssertEqual(dateComponent.second, 27)
+            XCTAssertEqual(dateComponent.timeZone!, timeZone)
         }
         else
         {
@@ -257,16 +258,16 @@ class NSDateExtension_Tests: XCTestCase {
         
         let dateString = "1937-01-01T12:00:27"
         
-        if let date: NSDate = NSDate.dateFromInternetDateTimeString(dateString)?
+        if let date: Date = Date.dateFromInternetDateTimeString(dateString)
         {
-            var dateComponent = calendar.components(calendar_flags, fromDate: date)
+            var dateComponent = calendar.dateComponents(calendar_flags, from: date)
             
-            XCTAssert(dateComponent.day == 1, "")
-            XCTAssert(dateComponent.month == 1, "")
-            XCTAssert(dateComponent.year == 1937, "")
-            XCTAssert(dateComponent.hour == 12, "")
-            XCTAssert(dateComponent.minute == 0, "")
-            XCTAssert(dateComponent.second == 27, "")
+            XCTAssertEqual(dateComponent.day, 1)
+            XCTAssertEqual(dateComponent.month, 1)
+            XCTAssertEqual(dateComponent.year, 1937)
+            XCTAssertEqual(dateComponent.hour, 12)
+            XCTAssertEqual(dateComponent.minute, 0)
+            XCTAssertEqual(dateComponent.second, 27)
         }
         else
         {
