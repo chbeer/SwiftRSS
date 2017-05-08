@@ -23,6 +23,7 @@
 		11A935F519EFB6D6005B78A1 /* RSSFeed_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A935F419EFB6D6005B78A1 /* RSSFeed_Tests.swift */; };
 		11C8C1B019DC7A1E0040D5F4 /* NSDate+dateFromInternetDateTimeString_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8C1AF19DC7A1E0040D5F4 /* NSDate+dateFromInternetDateTimeString_Tests.swift */; };
 		11F4B4C919E890030020EB6B /* Empty.rss in Resources */ = {isa = PBXBuildFile; fileRef = 11F4B4C719E890030020EB6B /* Empty.rss */; };
+		AA39D11F1EC0A1CD0075A9C0 /* SwiftRSS.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4B97281EC085FA009E5EF4 /* SwiftRSS.h */; };
 		AA4B972A1EC085FA009E5EF4 /* SwiftRSS.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4B97281EC085FA009E5EF4 /* SwiftRSS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA4B972D1EC085FA009E5EF4 /* SwiftRSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */; };
 		AA4B972E1EC085FA009E5EF4 /* SwiftRSS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -35,14 +36,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		114E26C419BA399B00D292F3 /* PBXContainerItemProxy */ = {
+		AA4B972B1EC085FA009E5EF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 119025CE19B92DA1009184BE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 119025D519B92DA1009184BE;
-			remoteInfo = SwiftRSS_Example;
+			remoteGlobalIDString = AA4B97251EC085FA009E5EF4;
+			remoteInfo = SwiftRSS;
 		};
-		AA4B972B1EC085FA009E5EF4 /* PBXContainerItemProxy */ = {
+		AA4B973D1EC09B57009E5EF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 119025CE19B92DA1009184BE /* Project object */;
 			proxyType = 1;
@@ -91,9 +92,11 @@
 		11C8C1AD19DC3EB80040D5F4 /* NSDate+dateFromInternetDateTimeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+dateFromInternetDateTimeString.swift"; sourceTree = "<group>"; };
 		11C8C1AF19DC7A1E0040D5F4 /* NSDate+dateFromInternetDateTimeString_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+dateFromInternetDateTimeString_Tests.swift"; sourceTree = "<group>"; };
 		11F4B4C719E890030020EB6B /* Empty.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Empty.rss; sourceTree = "<group>"; };
+		AA39D1171EC0A04D0075A9C0 /* SwiftRSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftRSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA39D11A1EC0A04D0075A9C0 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "SwiftRSS/Info-tvOS.plist"; sourceTree = SOURCE_ROOT; };
 		AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftRSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4B97281EC085FA009E5EF4 /* SwiftRSS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftRSS.h; sourceTree = "<group>"; };
-		AA4B97291EC085FA009E5EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA4B97291EC085FA009E5EF4 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		AA4B97391EC08CCD009E5EF4 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +113,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA4B972D1EC085FA009E5EF4 /* SwiftRSS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA39D1131EC0A04D0075A9C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +173,6 @@
 				119025FA19B92DB1009184BE /* SwiftRSS */,
 				119025D819B92DA1009184BE /* SwiftRSS_Example */,
 				114E26BF19BA399B00D292F3 /* Tests */,
-				AA4B97271EC085FA009E5EF4 /* SwiftRSS */,
 				119025D719B92DA1009184BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -174,6 +183,7 @@
 				119025D619B92DA1009184BE /* SwiftRSS_Example.app */,
 				114E26BE19BA399B00D292F3 /* Tests.xctest */,
 				AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */,
+				AA39D1171EC0A04D0075A9C0 /* SwiftRSS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,14 +220,8 @@
 				117F56B119D861D10004DDEA /* RSSItem.swift */,
 				11C8C1AD19DC3EB80040D5F4 /* NSDate+dateFromInternetDateTimeString.swift */,
 				114F733B19F809200048E7B0 /* String+imageLinksFromHTML.swift */,
-				AA4B97291EC085FA009E5EF4 /* Info.plist */,
-			);
-			path = SwiftRSS;
-			sourceTree = "<group>";
-		};
-		AA4B97271EC085FA009E5EF4 /* SwiftRSS */ = {
-			isa = PBXGroup;
-			children = (
+				AA4B97291EC085FA009E5EF4 /* Info-iOS.plist */,
+				AA39D11A1EC0A04D0075A9C0 /* Info-tvOS.plist */,
 			);
 			path = SwiftRSS;
 			sourceTree = "<group>";
@@ -225,6 +229,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		AA39D1141EC0A04D0075A9C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA39D11F1EC0A1CD0075A9C0 /* SwiftRSS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA4B97231EC085FA009E5EF4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,7 +259,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				114E26C519BA399B00D292F3 /* PBXTargetDependency */,
+				AA4B973E1EC09B57009E5EF4 /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = Tests;
@@ -273,9 +285,27 @@
 			productReference = 119025D619B92DA1009184BE /* SwiftRSS_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AA4B97251EC085FA009E5EF4 /* SwiftRSS */ = {
+		AA39D1161EC0A04D0075A9C0 /* SwiftRSS-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA4B97311EC085FA009E5EF4 /* Build configuration list for PBXNativeTarget "SwiftRSS" */;
+			buildConfigurationList = AA39D11C1EC0A04D0075A9C0 /* Build configuration list for PBXNativeTarget "SwiftRSS-tvOS" */;
+			buildPhases = (
+				AA39D1121EC0A04D0075A9C0 /* Sources */,
+				AA39D1131EC0A04D0075A9C0 /* Frameworks */,
+				AA39D1141EC0A04D0075A9C0 /* Headers */,
+				AA39D1151EC0A04D0075A9C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftRSS-tvOS";
+			productName = "SwiftRSS-tvOS";
+			productReference = AA39D1171EC0A04D0075A9C0 /* SwiftRSS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA4B97251EC085FA009E5EF4 /* SwiftRSS-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA4B97311EC085FA009E5EF4 /* Build configuration list for PBXNativeTarget "SwiftRSS-iOS" */;
 			buildPhases = (
 				AA4B97211EC085FA009E5EF4 /* Sources */,
 				AA4B97221EC085FA009E5EF4 /* Frameworks */,
@@ -286,7 +316,7 @@
 			);
 			dependencies = (
 			);
-			name = SwiftRSS;
+			name = "SwiftRSS-iOS";
 			productName = SwiftRSS;
 			productReference = AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */;
 			productType = "com.apple.product-type.framework";
@@ -303,11 +333,15 @@
 					114E26BD19BA399B00D292F3 = {
 						CreatedOnToolsVersion = 6.0;
 						LastSwiftMigration = 0830;
-						TestTargetID = 119025D519B92DA1009184BE;
+						ProvisioningStyle = Automatic;
 					};
 					119025D519B92DA1009184BE = {
 						CreatedOnToolsVersion = 6.0;
 						LastSwiftMigration = 0830;
+					};
+					AA39D1161EC0A04D0075A9C0 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
 					};
 					AA4B97251EC085FA009E5EF4 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -329,7 +363,8 @@
 			projectRoot = "";
 			targets = (
 				119025D519B92DA1009184BE /* SwiftRSS_Example */,
-				AA4B97251EC085FA009E5EF4 /* SwiftRSS */,
+				AA4B97251EC085FA009E5EF4 /* SwiftRSS-iOS */,
+				AA39D1161EC0A04D0075A9C0 /* SwiftRSS-tvOS */,
 				114E26BD19BA399B00D292F3 /* Tests */,
 			);
 		};
@@ -356,6 +391,13 @@
 				111EFED219FD70D400300EC4 /* template.html in Resources */,
 				119025E519B92DA1009184BE /* Images.xcassets in Resources */,
 				AA4B973A1EC08CCD009E5EF4 /* Launch.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA39D1151EC0A04D0075A9C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +433,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA39D1121EC0A04D0075A9C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA4B97211EC085FA009E5EF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,15 +455,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		114E26C519BA399B00D292F3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 119025D519B92DA1009184BE /* SwiftRSS_Example */;
-			targetProxy = 114E26C419BA399B00D292F3 /* PBXContainerItemProxy */;
-		};
 		AA4B972C1EC085FA009E5EF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AA4B97251EC085FA009E5EF4 /* SwiftRSS */;
+			target = AA4B97251EC085FA009E5EF4 /* SwiftRSS-iOS */;
 			targetProxy = AA4B972B1EC085FA009E5EF4 /* PBXContainerItemProxy */;
+		};
+		AA4B973E1EC09B57009E5EF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA4B97251EC085FA009E5EF4 /* SwiftRSS-iOS */;
+			targetProxy = AA4B973D1EC09B57009E5EF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -433,6 +482,8 @@
 		114E26C719BA399B00D292F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -445,14 +496,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lelevier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftRSS_Example.app/SwiftRSS_Example";
 			};
 			name = Debug;
 		};
 		114E26C819BA399B00D292F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -461,8 +514,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lelevier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftRSS_Example.app/SwiftRSS_Example";
 			};
 			name = Release;
 		};
@@ -563,6 +616,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lelevier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -576,6 +630,65 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lelevier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		AA39D11D1EC0A04D0075A9C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "SwiftRSS/Info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lelevier.SwiftRSS;
+				PRODUCT_NAME = SwiftRSS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA39D11E1EC0A04D0075A9C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "SwiftRSS/Info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lelevier.SwiftRSS;
+				PRODUCT_NAME = SwiftRSS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -596,15 +709,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SwiftRSS/Info.plist;
+				INFOPLIST_FILE = "SwiftRSS/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lelevier..SwiftRSS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lelevier.SwiftRSS;
+				PRODUCT_NAME = SwiftRSS;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator macosx";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -630,15 +741,13 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SwiftRSS/Info.plist;
+				INFOPLIST_FILE = "SwiftRSS/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lelevier..SwiftRSS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lelevier.SwiftRSS;
+				PRODUCT_NAME = SwiftRSS;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -677,13 +786,22 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA4B97311EC085FA009E5EF4 /* Build configuration list for PBXNativeTarget "SwiftRSS" */ = {
+		AA39D11C1EC0A04D0075A9C0 /* Build configuration list for PBXNativeTarget "SwiftRSS-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA39D11D1EC0A04D0075A9C0 /* Debug */,
+				AA39D11E1EC0A04D0075A9C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AA4B97311EC085FA009E5EF4 /* Build configuration list for PBXNativeTarget "SwiftRSS-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA4B972F1EC085FA009E5EF4 /* Debug */,
 				AA4B97301EC085FA009E5EF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

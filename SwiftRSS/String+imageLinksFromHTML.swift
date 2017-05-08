@@ -6,10 +6,8 @@
 //  Copyright (c) 2014 Thibaut LE LEVIER. All rights reserved.
 //
 
-import UIKit
-
-extension String {
-    var imageLinksFromHTMLString: [URL]
+public extension String {
+    public var imageLinksFromHTMLString: [URL]
     {
         var matches = [URL]()
         

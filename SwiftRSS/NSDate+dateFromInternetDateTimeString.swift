@@ -12,9 +12,6 @@
 // The following code take a lot of inspiration from Michael Waterfall date category in MWFeedParser
 // Thanks to him!
 
-
-import UIKit
-
 extension Date {
     
     static var internetDateFormatter : DateFormatter {

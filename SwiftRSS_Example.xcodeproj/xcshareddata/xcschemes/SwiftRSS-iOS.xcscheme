@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA4B97251EC085FA009E5EF4"
-               BuildableName = "SwiftRSS.framework"
-               BlueprintName = "SwiftRSS"
+               BuildableName = "SwiftRSS-iOS.framework"
+               BlueprintName = "SwiftRSS-iOS"
                ReferencedContainer = "container:SwiftRSS_Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA4B97251EC085FA009E5EF4"
-            BuildableName = "SwiftRSS.framework"
-            BlueprintName = "SwiftRSS"
+            BuildableName = "SwiftRSS-iOS.framework"
+            BlueprintName = "SwiftRSS-iOS"
             ReferencedContainer = "container:SwiftRSS_Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA4B97251EC085FA009E5EF4"
-            BuildableName = "SwiftRSS.framework"
-            BlueprintName = "SwiftRSS"
+            BuildableName = "SwiftRSS-iOS.framework"
+            BlueprintName = "SwiftRSS-iOS"
             ReferencedContainer = "container:SwiftRSS_Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,8 +83,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA4B97251EC085FA009E5EF4"
-            BuildableName = "SwiftRSS.framework"
-            BlueprintName = "SwiftRSS"
+            BuildableName = "SwiftRSS-iOS.framework"
+            BlueprintName = "SwiftRSS-iOS"
             ReferencedContainer = "container:SwiftRSS_Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

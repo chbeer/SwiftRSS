@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Thibaut LE LEVIER. All rights reserved.
 //
 
-import UIKit
-
 public class RSSItem: NSObject, NSCoding {
     public var title: String?
     public var link: URL?

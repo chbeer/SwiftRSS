@@ -6,10 +6,7 @@
 //  Copyright (c) 2014 Thibaut LE LEVIER. All rights reserved.
 //
 
-import UIKit
-
-public
-class RSSFeed: NSObject, NSCoding {
+public class RSSFeed: NSObject, NSCoding {
     
     public var items: [RSSItem]! = [RSSItem]()
     

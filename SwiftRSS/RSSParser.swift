@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Thibaut LE LEVIER. All rights reserved.
 //
 
-import UIKit
-
 public typealias RSSParserCallback = (_ feed: RSSFeed?, _ error: NSError?) -> Void
 
 public class RSSParser: NSObject, XMLParserDelegate {
