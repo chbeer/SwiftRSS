@@ -23,7 +23,7 @@
 		11A935F519EFB6D6005B78A1 /* RSSFeed_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A935F419EFB6D6005B78A1 /* RSSFeed_Tests.swift */; };
 		11C8C1B019DC7A1E0040D5F4 /* NSDate+dateFromInternetDateTimeString_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8C1AF19DC7A1E0040D5F4 /* NSDate+dateFromInternetDateTimeString_Tests.swift */; };
 		11F4B4C919E890030020EB6B /* Empty.rss in Resources */ = {isa = PBXBuildFile; fileRef = 11F4B4C719E890030020EB6B /* Empty.rss */; };
-		AA39D11F1EC0A1CD0075A9C0 /* SwiftRSS.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4B97281EC085FA009E5EF4 /* SwiftRSS.h */; };
+		AA39D11F1EC0A1CD0075A9C0 /* SwiftRSS.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4B97281EC085FA009E5EF4 /* SwiftRSS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA4B972A1EC085FA009E5EF4 /* SwiftRSS.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4B97281EC085FA009E5EF4 /* SwiftRSS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA4B972D1EC085FA009E5EF4 /* SwiftRSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */; };
 		AA4B972E1EC085FA009E5EF4 /* SwiftRSS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA4B97261EC085FA009E5EF4 /* SwiftRSS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
